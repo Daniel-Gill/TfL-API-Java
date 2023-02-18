@@ -1,2 +1,2 @@
 rootProject.name = 'TfL-API-Java'
-include('lib')
+include('tfl-api-java')
