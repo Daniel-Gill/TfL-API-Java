@@ -1,9 +1,23 @@
-package net.danielgill.tfl.route;
+package net.danielgill.tfl.line;
 
 import javax.annotation.Nullable;
 
 public enum Mode {
-    BUS, TUBE, RIVERBUS, OVERGROUND, ELIZABETHLINE, CABLECAR, DLR, NATIONALRAIL, TRAM;
+    BUS ("bus"), 
+    TUBE ("tube"), 
+    RIVERBUS ("river-bus"), 
+    OVERGROUND ("overground"), 
+    ELIZABETHLINE ("elizabeth-line"), 
+    CABLECAR ("cable-car"), 
+    DLR ("dlr"), 
+    NATIONALRAIL ("national-rail"), 
+    TRAM ("tram");
+
+    public final String name;
+
+    private Mode(String name) {
+        this.name = name;
+    }
 
     @Nullable
     public static Mode getFromString(String name) {

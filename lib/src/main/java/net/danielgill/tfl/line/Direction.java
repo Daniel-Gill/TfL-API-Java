@@ -1,4 +1,4 @@
-package net.danielgill.tfl.route;
+package net.danielgill.tfl.line;
 
 import javax.annotation.Nullable;
 

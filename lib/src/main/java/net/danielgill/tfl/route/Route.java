@@ -2,10 +2,12 @@ package net.danielgill.tfl.route;
 
 import com.google.gson.JsonObject;
 
+import net.danielgill.tfl.line.Direction;
+import net.danielgill.tfl.line.Line;
 import net.danielgill.tfl.station.Station;
 
 /**
- * A single route on a {@link Line line}. Consists of a name, direction and origin and destination stations.
+ * A single route on a {@link Line Line}. Consists of a name, direction and origin and destination stations.
  */
 public class Route {
     public final String name;
@@ -32,5 +34,10 @@ public class Route {
             destination,
             ServiceType.getFromString(object.get("serviceType").getAsString())
         );
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }
